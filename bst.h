@@ -620,12 +620,12 @@ void BinarySearchTree<Key, Value>::remove(const Key& key)
 		{
 			if (temp -> getLeft() == NULL)
 			{
-                //if temp is the right child of parent,, changing parents right child to temps right child
+        //if temp is the right child of parent,, changing parents right child to temps right child
 				if (temp-> getParent() -> getRight() == temp)
 				{
 					temp-> getParent() -> setRight(temp -> getRight());
 				}
-                //if temp is the right child of parent,, changing parents left child to temps right child
+        //if temp is the right child of parent,, changing parents left child to temps right child
 				else if (temp-> getParent() -> getLeft() == temp)
 				{
 					temp-> getParent() -> setLeft(temp -> getRight());
@@ -633,24 +633,24 @@ void BinarySearchTree<Key, Value>::remove(const Key& key)
 			}
 			if (temp -> getRight() == NULL)
 			{
-                //if temp is the left child of parent,, changing parents right child to temps left child
+        //if temp is the left child of parent,, changing parents right child to temps left child
 				if (temp-> getParent() -> getRight() == temp)
 				{
 					temp-> getParent() -> setRight(temp -> getLeft());
 				}
-                //if temp is the left child of parent,, changing parents left child to temps left child
+        //if temp is the left child of parent,, changing parents left child to temps left child
 				else if (temp-> getParent() -> getLeft() == temp)
 				{
 					temp-> getParent() -> setLeft(temp -> getLeft());
 				}
 			}
 		}
-        //sets leftchild parent to temp's parents
+    //sets leftchild parent to temp's parents
 		if (temp -> getRight() == NULL)
 		{
 			temp -> getLeft() -> setParent(temp -> getParent());
 		}
-        //sets rightchild parent to temp's parents
+    //sets rightchild parent to temp's parents
 		else if (temp -> getLeft() == NULL)
 		{
 			temp -> getRight() -> setParent(temp -> getParent());
